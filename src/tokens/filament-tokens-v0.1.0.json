@@ -1,0 +1,420 @@
+{
+  "$metadata": {
+    "system":  "Filament",
+    "version": "0.1.0",
+    "updated": "2026-04-01",
+    "description": "Complete design token set. global = primitives. light/dark = semantic aliases. component = component-level specs.",
+    "typography": {
+      "display":        "Spectral 600 — headings, logo, stat values",
+      "display-italic": "Spectral 400 italic — subheadings, pull quotes",
+      "ui":             "DM Sans 500 — labels, buttons, nav",
+      "body":           "DM Sans 400 — body, captions, tables"
+    }
+  },
+
+  "global": {
+
+    "color": {
+      "gold": {
+        "50":  { "value": "#FBF4E0", "type": "color" },
+        "100": { "value": "#F5ECCC", "type": "color" },
+        "200": { "value": "#EDD89A", "type": "color" },
+        "400": { "value": "#E7CC86", "type": "color" },
+        "600": { "value": "#C9A94F", "type": "color" },
+        "800": { "value": "#8A6A1A", "type": "color" },
+        "900": { "value": "#4A380E", "type": "color" }
+      },
+      "navy": {
+        "50":  { "value": "#EDF2F5", "type": "color" },
+        "100": { "value": "#CCDAE4", "type": "color" },
+        "200": { "value": "#8EB2C8", "type": "color" },
+        "400": { "value": "#4A7A99", "type": "color" },
+        "600": { "value": "#254052", "type": "color" },
+        "800": { "value": "#162838", "type": "color" },
+        "900": { "value": "#0A1620", "type": "color" }
+      },
+      "vermillion": {
+        "50":  { "value": "#FEF0F0", "type": "color" },
+        "100": { "value": "#FDE8E8", "type": "color" },
+        "200": { "value": "#FAB8B7", "type": "color" },
+        "400": { "value": "#F87775", "type": "color" },
+        "600": { "value": "#F64740", "type": "color" },
+        "800": { "value": "#B82020", "type": "color" },
+        "900": { "value": "#6A1010", "type": "color" }
+      },
+      "steel": {
+        "50":  { "value": "#EBF5F7", "type": "color" },
+        "100": { "value": "#C8E4EA", "type": "color" },
+        "200": { "value": "#94CCD8", "type": "color" },
+        "400": { "value": "#5296A5", "type": "color" },
+        "600": { "value": "#2E6878", "type": "color" },
+        "800": { "value": "#1A3E48", "type": "color" },
+        "900": { "value": "#0E2228", "type": "color" }
+      },
+      "neutral": {
+        "0":   { "value": "#FFFFFF", "type": "color" },
+        "50":  { "value": "#FAFAF6", "type": "color" },
+        "100": { "value": "#EDEAE4", "type": "color" },
+        "200": { "value": "#E2DBD0", "type": "color" },
+        "400": { "value": "#C8C0B4", "type": "color" },
+        "600": { "value": "#8A9CA8", "type": "color" },
+        "800": { "value": "#4A6070", "type": "color" },
+        "900": { "value": "#1C2E3A", "type": "color" }
+      }
+    },
+
+    "font": {
+      "family": {
+        "display": { "value": "Spectral, Georgia, serif",         "type": "fontFamilies" },
+        "body":    { "value": "'DM Sans', system-ui, sans-serif", "type": "fontFamilies" }
+      },
+      "weight": {
+        "regular":  { "value": "400", "type": "fontWeights" },
+        "medium":   { "value": "500", "type": "fontWeights" },
+        "semibold": { "value": "600", "type": "fontWeights" }
+      },
+      "size": {
+        "xs":  { "value": "10", "type": "fontSizes", "$description": "Captions, timestamps, meta" },
+        "sm":  { "value": "11", "type": "fontSizes", "$description": "Labels, badges, small UI" },
+        "md":  { "value": "13", "type": "fontSizes", "$description": "Body text, table content" },
+        "lg":  { "value": "16", "type": "fontSizes", "$description": "Section headings, nav" },
+        "xl":  { "value": "20", "type": "fontSizes", "$description": "Page headings" },
+        "2xl": { "value": "28", "type": "fontSizes", "$description": "Display / hero" }
+      },
+      "lineHeight": {
+        "tight":   { "value": "1.1",  "type": "lineHeights", "$description": "Display headings" },
+        "snug":    { "value": "1.25", "type": "lineHeights", "$description": "Section headings" },
+        "normal":  { "value": "1.5",  "type": "lineHeights", "$description": "Labels, captions" },
+        "relaxed": { "value": "1.7",  "type": "lineHeights", "$description": "Body text" },
+        "loose":   { "value": "1.75", "type": "lineHeights", "$description": "Long-form reading" }
+      },
+      "letterSpacing": {
+        "tighter": { "value": "-0.02em", "type": "letterSpacing", "$description": "Display — Spectral" },
+        "tight":   { "value": "-0.01em", "type": "letterSpacing", "$description": "Headings — Spectral" },
+        "normal":  { "value": "0",       "type": "letterSpacing", "$description": "Body — DM Sans" },
+        "wide":    { "value": "0.04em",  "type": "letterSpacing", "$description": "Labels, badges" },
+        "wider":   { "value": "0.09em",  "type": "letterSpacing", "$description": "Section labels / eyebrows" },
+        "widest":  { "value": "0.12em",  "type": "letterSpacing", "$description": "Mode labels, ALL CAPS UI" }
+      }
+    },
+
+    "spacing": {
+      "$description": "4px base grid. Token name = px value ÷ 4. All spacing, sizing, and gap values reference this scale.",
+      "0":  { "value": "0",  "type": "spacing" },
+      "1":  { "value": "4",  "type": "spacing", "$description": "Icon gap, tight badge padding" },
+      "2":  { "value": "8",  "type": "spacing", "$description": "Button icon gap, input inner gap" },
+      "3":  { "value": "12", "type": "spacing", "$description": "Input paddingX, compact list gap" },
+      "4":  { "value": "16", "type": "spacing", "$description": "Button paddingX, card section gap" },
+      "5":  { "value": "20", "type": "spacing", "$description": "Card inner section spacing" },
+      "6":  { "value": "24", "type": "spacing", "$description": "Card padding, section gap" },
+      "7":  { "value": "28", "type": "spacing", "$description": "Panel padding, compact card" },
+      "8":  { "value": "32", "type": "spacing", "$description": "Large card padding, modal padding" },
+      "9":  { "value": "36", "type": "spacing", "$description": "Standard input height" },
+      "10": { "value": "40", "type": "spacing", "$description": "Large button height, toolbar" },
+      "12": { "value": "48", "type": "spacing", "$description": "Nav height, page section padding" },
+      "16": { "value": "64", "type": "spacing", "$description": "Page top padding, hero gap" },
+      "20": { "value": "80", "type": "spacing", "$description": "Page bottom padding" },
+      "24": { "value": "96", "type": "spacing", "$description": "Hero section vertical padding" }
+    },
+
+    "borderRadius": {
+      "none": { "value": "0",    "type": "borderRadius", "$description": "Dividers, bars, flush elements" },
+      "sm":   { "value": "4",    "type": "borderRadius", "$description": "Badges, tags, chips" },
+      "md":   { "value": "8",    "type": "borderRadius", "$description": "Inputs, buttons, small cards" },
+      "lg":   { "value": "12",   "type": "borderRadius", "$description": "Cards, dropdowns, menus" },
+      "xl":   { "value": "16",   "type": "borderRadius", "$description": "Panels, modals, drawers" },
+      "2xl":  { "value": "20",   "type": "borderRadius", "$description": "Feature cards, hero sections" },
+      "full": { "value": "9999", "type": "borderRadius", "$description": "Pills, toggles, avatar rings" }
+    },
+
+    "borderWidth": {
+      "hairline": { "value": "0.5", "type": "borderWidths", "$description": "Default — all borders and dividers" },
+      "thin":     { "value": "1",   "type": "borderWidths", "$description": "Emphasis borders" },
+      "accent":   { "value": "2",   "type": "borderWidths", "$description": "Pull quotes, featured card ring" },
+      "thick":    { "value": "3",   "type": "borderWidths", "$description": "Top accent bars on cards" }
+    },
+
+    "shadow": {
+      "$description": "Light mode elevation. Dark mode uses surface lightening — see dark.elevation.",
+      "none": { "value": "none",                                                                                 "type": "boxShadow" },
+      "xs":   { "value": "0 1px 2px rgba(20, 32, 44, 0.06)",                                                    "type": "boxShadow", "$description": "Input focus lift, inline cards" },
+      "sm":   { "value": "0 2px 6px rgba(20, 32, 44, 0.08)",                                                    "type": "boxShadow", "$description": "Cards, dropdowns" },
+      "md":   { "value": "0 4px 16px rgba(20, 32, 44, 0.10), 0 1px 4px rgba(20, 32, 44, 0.06)",                 "type": "boxShadow", "$description": "Raised cards, popovers" },
+      "lg":   { "value": "0 8px 32px rgba(20, 32, 44, 0.12), 0 2px 8px rgba(20, 32, 44, 0.06)",                 "type": "boxShadow", "$description": "Modals, drawers" },
+      "xl":   { "value": "0 16px 48px rgba(20, 32, 44, 0.16), 0 4px 12px rgba(20, 32, 44, 0.08)",               "type": "boxShadow", "$description": "Full-page overlays" },
+      "focus-steel":      { "value": "0 0 0 2.5px rgba(31, 100, 117, 0.20)",  "type": "boxShadow", "$description": "Input focus ring — light mode" },
+      "focus-steel-dark": { "value": "0 0 0 2.5px rgba(82, 150, 165, 0.25)",  "type": "boxShadow", "$description": "Input focus ring — dark mode" },
+      "focus-gold":       { "value": "0 0 0 2.5px rgba(231, 204, 134, 0.35)", "type": "boxShadow", "$description": "Primary action focus ring" },
+      "focus-red":        { "value": "0 0 0 2.5px rgba(246, 71, 64, 0.18)",   "type": "boxShadow", "$description": "Error state focus ring" }
+    },
+
+    "motion": {
+      "duration": {
+        "instant": { "value": "75ms",  "type": "other", "$description": "Checkbox tick, toggle snap" },
+        "fast":    { "value": "100ms", "type": "other", "$description": "Hover states, badge swap, tooltip show" },
+        "default": { "value": "200ms", "type": "other", "$description": "Most transitions — color, border, opacity" },
+        "slow":    { "value": "300ms", "type": "other", "$description": "Modals, panels, drawers entering" },
+        "slower":  { "value": "400ms", "type": "other", "$description": "Staggered reveals, onboarding flows" }
+      },
+      "easing": {
+        "linear":      { "value": "linear",                            "type": "other", "$description": "Spinners, progress bars" },
+        "ease-out":    { "value": "cubic-bezier(0.0, 0.0, 0.2, 1)",   "type": "other", "$description": "Entering elements — default" },
+        "ease-in":     { "value": "cubic-bezier(0.4, 0.0, 1, 1)",     "type": "other", "$description": "Exiting elements" },
+        "ease-in-out": { "value": "cubic-bezier(0.4, 0.0, 0.2, 1)",   "type": "other", "$description": "Elements moving position" },
+        "spring":      { "value": "cubic-bezier(0.34, 1.56, 0.64, 1)","type": "other", "$description": "Toasts, confirmations, delight moments" }
+      }
+    },
+
+    "zIndex": {
+      "base":     { "value": "0",   "type": "other" },
+      "raised":   { "value": "10",  "type": "other", "$description": "Sticky headers, pinned rows" },
+      "dropdown": { "value": "100", "type": "other", "$description": "Dropdowns, tooltips, popovers" },
+      "overlay":  { "value": "200", "type": "other", "$description": "Modal backdrop" },
+      "modal":    { "value": "300", "type": "other", "$description": "Modal panel above backdrop" },
+      "toast":    { "value": "400", "type": "other", "$description": "Toasts — always on top" }
+    }
+  },
+
+  "light": {
+    "$themes": ["light"],
+
+    "background": {
+      "page":    { "value": "{global.color.neutral.50}",  "type": "color", "$description": "#FAFAF6 — warm off-white base" },
+      "surface": { "value": "{global.color.neutral.0}",   "type": "color", "$description": "#FFFFFF — cards, panels, inputs" },
+      "subtle":  { "value": "{global.color.neutral.100}", "type": "color", "$description": "#EDEAE4 — stat cells, meta blocks" },
+      "overlay": { "value": "rgba(37, 64, 82, 0.50)",     "type": "color", "$description": "Modal scrim" },
+      "nav":     { "value": "{global.color.navy.600}",    "type": "color", "$description": "#254052 — top nav" }
+    },
+
+    "border": {
+      "default": { "value": "{global.color.neutral.200}",    "type": "color", "$description": "#E2DBD0" },
+      "strong":  { "value": "{global.color.neutral.400}",    "type": "color", "$description": "#C8C0B4 — ghost button, emphasis" },
+      "focused": { "value": "#1F6475",                       "type": "color", "$description": "Darkened steel — AA compliant on white" },
+      "error":   { "value": "{global.color.vermillion.600}", "type": "color" },
+      "accent":  { "value": "{global.color.gold.400}",       "type": "color", "$description": "Pull quote bar, card top accent" }
+    },
+
+    "text": {
+      "display":     { "value": "{global.color.navy.600}",       "type": "color", "$description": "#254052 · Spectral 600" },
+      "heading":     { "value": "{global.color.navy.600}",       "type": "color", "$description": "#254052 · Spectral 600" },
+      "subheading":  { "value": "#1F6475",                       "type": "color", "$description": "Spectral 400 italic · darkened steel for AA" },
+      "body":        { "value": "{global.color.neutral.800}",    "type": "color", "$description": "#4A6070 · DM Sans 400" },
+      "label":       { "value": "{global.color.navy.600}",       "type": "color", "$description": "#254052 · DM Sans 500" },
+      "caption":     { "value": "#546B78",                       "type": "color", "$description": "DM Sans 400 · darkened for AA compliance" },
+      "hint":        { "value": "#546B78",                       "type": "color" },
+      "link":        { "value": "#1F6475",                       "type": "color", "$description": "DM Sans 400 · darkened steel for AA" },
+      "error":       { "value": "{global.color.vermillion.800}", "type": "color" },
+      "disabled":    { "value": "{global.color.neutral.600}",    "type": "color" },
+      "placeholder": { "value": "{global.color.neutral.600}",    "type": "color" },
+      "nav-active":  { "value": "rgba(255, 255, 255, 0.90)",     "type": "color" },
+      "nav-muted":   { "value": "rgba(255, 255, 255, 0.45)",     "type": "color" },
+      "on-gold":     { "value": "#3A2C0A",                       "type": "color" },
+      "on-navy":     { "value": "{global.color.gold.400}",       "type": "color" },
+      "on-red":      { "value": "{global.color.neutral.0}",      "type": "color" },
+      "on-steel":    { "value": "{global.color.neutral.0}",      "type": "color" }
+    },
+
+    "action": {
+      "primary":   { "background": { "value": "{global.color.gold.400}",       "type": "color" }, "text": { "value": "#3A2C0A",                      "type": "color" }, "border": { "value": "{global.color.gold.600}",       "type": "color" } },
+      "secondary": { "background": { "value": "{global.color.navy.600}",       "type": "color" }, "text": { "value": "{global.color.gold.400}",       "type": "color" }, "border": { "value": "{global.color.navy.600}",       "type": "color" } },
+      "danger":    { "background": { "value": "{global.color.vermillion.600}", "type": "color" }, "text": { "value": "{global.color.neutral.0}",      "type": "color" }, "border": { "value": "{global.color.vermillion.600}","type": "color" } },
+      "info":      { "background": { "value": "{global.color.steel.400}",      "type": "color" }, "text": { "value": "{global.color.neutral.0}",      "type": "color" }, "border": { "value": "{global.color.steel.400}",      "type": "color" } },
+      "ghost":     { "background": { "value": "transparent",                   "type": "color" }, "text": { "value": "{global.color.neutral.800}",    "type": "color" }, "border": { "value": "{global.color.neutral.400}",    "type": "color" } }
+    },
+
+    "feedback": {
+      "danger":  { "background": { "value": "{global.color.vermillion.100}", "type": "color" }, "text": { "value": "{global.color.vermillion.800}", "type": "color" }, "accent": { "value": "{global.color.vermillion.600}", "type": "color" } },
+      "info":    { "background": { "value": "{global.color.steel.50}",       "type": "color" }, "text": { "value": "{global.color.steel.800}",       "type": "color" }, "accent": { "value": "{global.color.steel.400}",       "type": "color" } },
+      "warning": { "background": { "value": "{global.color.gold.100}",       "type": "color" }, "text": { "value": "{global.color.gold.800}",        "type": "color" }, "accent": { "value": "{global.color.gold.400}",        "type": "color" } }
+    },
+
+    "tag": {
+      "gold":    { "background": { "value": "{global.color.gold.100}",       "type": "color" }, "text": { "value": "#7A5A10",                      "type": "color" } },
+      "steel":   { "background": { "value": "{global.color.steel.50}",       "type": "color" }, "text": { "value": "#1E5E6E",                      "type": "color" } },
+      "red":     { "background": { "value": "{global.color.vermillion.100}", "type": "color" }, "text": { "value": "{global.color.vermillion.800}","type": "color" } },
+      "neutral": { "background": { "value": "{global.color.neutral.100}",    "type": "color" }, "text": { "value": "#546B78",                      "type": "color" } }
+    },
+
+    "input": {
+      "background":  { "value": "{global.color.neutral.0}",    "type": "color" },
+      "border":      { "value": "{global.color.neutral.200}",  "type": "color" },
+      "text":        { "value": "{global.color.navy.600}",     "type": "color" },
+      "placeholder": { "value": "{global.color.neutral.600}",  "type": "color" },
+      "focusBorder": { "value": "#1F6475",                     "type": "color" },
+      "focusRing":   { "value": "{global.shadow.focus-steel}", "type": "boxShadow" },
+      "errorBorder": { "value": "{global.color.vermillion.600}","type": "color" },
+      "errorRing":   { "value": "{global.shadow.focus-red}",   "type": "boxShadow" }
+    },
+
+    "elevation": {
+      "card":    { "value": "{global.shadow.sm}", "type": "boxShadow" },
+      "raised":  { "value": "{global.shadow.md}", "type": "boxShadow" },
+      "modal":   { "value": "{global.shadow.lg}", "type": "boxShadow" },
+      "overlay": { "value": "{global.shadow.xl}", "type": "boxShadow" }
+    }
+  },
+
+  "dark": {
+    "$themes": ["dark"],
+
+    "background": {
+      "page":    { "value": "#131D25", "type": "color", "$description": "Darkest — page base" },
+      "surface": { "value": "#1C2D39", "type": "color", "$description": "Cards, panels, inputs" },
+      "subtle":  { "value": "#1A2830", "type": "color", "$description": "Stat cells, meta blocks" },
+      "overlay": { "value": "rgba(10, 22, 32, 0.75)", "type": "color", "$description": "Modal scrim" },
+      "nav":     { "value": "#0E1820", "type": "color", "$description": "Top nav — deeper than page" }
+    },
+
+    "border": {
+      "default": { "value": "#1E3040",                       "type": "color" },
+      "strong":  { "value": "#2E4858",                       "type": "color", "$description": "Ghost button, inputs" },
+      "focused": { "value": "{global.color.steel.400}",      "type": "color", "$description": "#5296A5 — full swatch passes on dark surface" },
+      "error":   { "value": "{global.color.vermillion.600}", "type": "color" },
+      "accent":  { "value": "{global.color.gold.400}",       "type": "color" }
+    },
+
+    "text": {
+      "display":     { "value": "#F0E8D6",                      "type": "color", "$description": "Warm cream · Spectral 600" },
+      "heading":     { "value": "#E8DEC8",                      "type": "color", "$description": "Spectral 600" },
+      "subheading":  { "value": "{global.color.steel.400}",     "type": "color", "$description": "#5296A5 · Spectral 400 italic" },
+      "body":        { "value": "{global.color.neutral.600}",   "type": "color", "$description": "#8A9CA8 · DM Sans 400" },
+      "label":       { "value": "#A8BEC8",                      "type": "color", "$description": "DM Sans 500" },
+      "caption":     { "value": "#7A9EAE",                      "type": "color", "$description": "DM Sans 400 · lightened for AA on dark" },
+      "hint":        { "value": "#7A9EAE",                      "type": "color" },
+      "link":        { "value": "#78BBCC",                      "type": "color" },
+      "error":       { "value": "#F98480",                      "type": "color" },
+      "disabled":    { "value": "#3A5060",                      "type": "color" },
+      "placeholder": { "value": "#3A5060",                      "type": "color" },
+      "nav-active":  { "value": "#A8C8D8",                      "type": "color" },
+      "nav-muted":   { "value": "#3A5060",                      "type": "color" },
+      "on-gold":     { "value": "#3A2C0A",                      "type": "color" },
+      "on-navy":     { "value": "{global.color.gold.400}",      "type": "color" },
+      "on-red":      { "value": "{global.color.neutral.0}",     "type": "color" },
+      "on-steel":    { "value": "{global.color.neutral.0}",     "type": "color" }
+    },
+
+    "action": {
+      "primary":   { "background": { "value": "{global.color.gold.400}",       "type": "color" }, "text": { "value": "#3A2C0A",                      "type": "color" }, "border": { "value": "{global.color.gold.600}",       "type": "color" } },
+      "secondary": { "background": { "value": "{global.color.navy.600}",       "type": "color" }, "text": { "value": "{global.color.gold.400}",       "type": "color" }, "border": { "value": "{global.color.navy.600}",       "type": "color" } },
+      "danger":    { "background": { "value": "{global.color.vermillion.600}", "type": "color" }, "text": { "value": "{global.color.neutral.0}",      "type": "color" }, "border": { "value": "{global.color.vermillion.600}","type": "color" } },
+      "info":      { "background": { "value": "{global.color.steel.400}",      "type": "color" }, "text": { "value": "{global.color.neutral.0}",      "type": "color" }, "border": { "value": "{global.color.steel.400}",      "type": "color" } },
+      "ghost":     { "background": { "value": "transparent",                   "type": "color" }, "text": { "value": "{global.color.neutral.600}",    "type": "color" }, "border": { "value": "#2E4858",                       "type": "color" } }
+    },
+
+    "feedback": {
+      "danger":  { "background": { "value": "#3A1010", "type": "color" }, "text": { "value": "#F98480", "type": "color" }, "accent": { "value": "{global.color.vermillion.600}", "type": "color" } },
+      "info":    { "background": { "value": "#112530", "type": "color" }, "text": { "value": "#78BBCC", "type": "color" }, "accent": { "value": "{global.color.steel.400}",       "type": "color" } },
+      "warning": { "background": { "value": "#35280E", "type": "color" }, "text": { "value": "#D4A840", "type": "color" }, "accent": { "value": "{global.color.gold.400}",        "type": "color" } }
+    },
+
+    "tag": {
+      "gold":    { "background": { "value": "#35280E", "type": "color" }, "text": { "value": "{global.color.gold.400}", "type": "color" } },
+      "steel":   { "background": { "value": "#112530", "type": "color" }, "text": { "value": "#78BBCC",                "type": "color" } },
+      "red":     { "background": { "value": "#3A1010", "type": "color" }, "text": { "value": "#F98480",                "type": "color" } },
+      "neutral": { "background": { "value": "#1A2830", "type": "color" }, "text": { "value": "#7A9EAE",                "type": "color" } }
+    },
+
+    "input": {
+      "background":  { "value": "#1C2D39",                           "type": "color" },
+      "border":      { "value": "#2E4858",                           "type": "color" },
+      "text":        { "value": "#D8E4EA",                           "type": "color" },
+      "placeholder": { "value": "#3A5060",                           "type": "color" },
+      "focusBorder": { "value": "{global.color.steel.400}",          "type": "color" },
+      "focusRing":   { "value": "{global.shadow.focus-steel-dark}",  "type": "boxShadow" },
+      "errorBorder": { "value": "{global.color.vermillion.600}",     "type": "color" },
+      "errorRing":   { "value": "{global.shadow.focus-red}",         "type": "boxShadow" }
+    },
+
+    "elevation": {
+      "$description": "Dark mode elevates via background-lightening, not shadows.",
+      "card":    { "value": "#1C2D39", "type": "color", "$description": "Base card surface" },
+      "raised":  { "value": "#1A2830", "type": "color", "$description": "Stat cells, subtle raised surface" },
+      "modal":   { "value": "#243444", "type": "color", "$description": "Modals, drawers" },
+      "overlay": { "value": "#2C3E50", "type": "color", "$description": "Command palette, highest layer" }
+    }
+  },
+
+  "component": {
+    "$description": "Component-level tokens. Reference semantic tokens wherever possible.",
+
+    "button": {
+      "height":      { "value": "{global.spacing.8}",             "type": "sizing",       "$description": "32px — standard" },
+      "height-sm":   { "value": "{global.spacing.7}",             "type": "sizing",       "$description": "28px — compact" },
+      "height-lg":   { "value": "{global.spacing.10}",            "type": "sizing",       "$description": "40px — large" },
+      "paddingX":    { "value": "{global.spacing.4}",             "type": "spacing",      "$description": "16px" },
+      "paddingX-sm": { "value": "{global.spacing.3}",             "type": "spacing" },
+      "paddingX-lg": { "value": "{global.spacing.6}",             "type": "spacing" },
+      "radius":      { "value": "{global.borderRadius.md}",       "type": "borderRadius", "$description": "8px" },
+      "fontSize":    { "value": "{global.font.size.sm}",          "type": "fontSizes",    "$description": "11px" },
+      "fontWeight":  { "value": "{global.font.weight.medium}",    "type": "fontWeights",  "$description": "500" },
+      "fontFamily":  { "value": "{global.font.family.body}",      "type": "fontFamilies", "$description": "DM Sans" },
+      "iconGap":     { "value": "{global.spacing.2}",             "type": "spacing",      "$description": "8px — icon to label" },
+      "duration":    { "value": "{global.motion.duration.fast}",  "type": "other" },
+      "easing":      { "value": "{global.motion.easing.ease-out}","type": "other" }
+    },
+
+    "input": {
+      "height":      { "value": "{global.spacing.9}",             "type": "sizing",       "$description": "36px" },
+      "paddingX":    { "value": "{global.spacing.3}",             "type": "spacing",      "$description": "12px" },
+      "paddingY":    { "value": "{global.spacing.2}",             "type": "spacing",      "$description": "8px" },
+      "radius":      { "value": "{global.borderRadius.md}",       "type": "borderRadius", "$description": "8px" },
+      "fontSize":    { "value": "{global.font.size.md}",          "type": "fontSizes",    "$description": "13px" },
+      "fontFamily":  { "value": "{global.font.family.body}",      "type": "fontFamilies" },
+      "borderWidth": { "value": "{global.borderWidth.hairline}",  "type": "borderWidths", "$description": "0.5px" },
+      "duration":    { "value": "{global.motion.duration.fast}",  "type": "other" },
+      "easing":      { "value": "{global.motion.easing.ease-out}","type": "other" }
+    },
+
+    "card": {
+      "padding":     { "value": "{global.spacing.6}",             "type": "spacing",      "$description": "24px" },
+      "padding-sm":  { "value": "{global.spacing.4}",             "type": "spacing",      "$description": "16px" },
+      "padding-lg":  { "value": "{global.spacing.8}",             "type": "spacing",      "$description": "32px" },
+      "radius":      { "value": "{global.borderRadius.lg}",       "type": "borderRadius", "$description": "12px" },
+      "borderWidth": { "value": "{global.borderWidth.hairline}",  "type": "borderWidths" },
+      "gap":         { "value": "{global.spacing.4}",             "type": "spacing",      "$description": "16px internal gap" }
+    },
+
+    "badge": {
+      "paddingX":    { "value": "{global.spacing.2}",             "type": "spacing",      "$description": "8px" },
+      "paddingY":    { "value": "3",                              "type": "spacing",      "$description": "3px" },
+      "radius":      { "value": "{global.borderRadius.full}",     "type": "borderRadius" },
+      "fontSize":    { "value": "{global.font.size.xs}",          "type": "fontSizes",    "$description": "10px" },
+      "fontWeight":  { "value": "{global.font.weight.medium}",    "type": "fontWeights" }
+    },
+
+    "modal": {
+      "width-sm":    { "value": "400",                            "type": "sizing" },
+      "width-md":    { "value": "560",                            "type": "sizing" },
+      "width-lg":    { "value": "720",                            "type": "sizing" },
+      "radius":      { "value": "{global.borderRadius.xl}",       "type": "borderRadius", "$description": "16px" },
+      "padding":     { "value": "{global.spacing.8}",             "type": "spacing",      "$description": "32px" },
+      "duration":    { "value": "{global.motion.duration.slow}",  "type": "other" },
+      "easing":      { "value": "{global.motion.easing.ease-out}","type": "other" }
+    },
+
+    "nav": {
+      "height":      { "value": "{global.spacing.12}",            "type": "sizing",       "$description": "48px" },
+      "paddingX":    { "value": "{global.spacing.4}",             "type": "spacing",      "$description": "16px" },
+      "logoSize":    { "value": "17",                             "type": "fontSizes",    "$description": "Spectral 600" },
+      "logoWeight":  { "value": "{global.font.weight.semibold}",  "type": "fontWeights" },
+      "linkSize":    { "value": "{global.font.size.xs}",          "type": "fontSizes",    "$description": "10px" },
+      "linkWeight":  { "value": "{global.font.weight.medium}",    "type": "fontWeights" },
+      "linkGap":     { "value": "{global.spacing.4}",             "type": "spacing",      "$description": "16px between links" }
+    },
+
+    "toast": {
+      "padding":     { "value": "{global.spacing.4}",             "type": "spacing" },
+      "radius":      { "value": "{global.borderRadius.lg}",       "type": "borderRadius" },
+      "duration":    { "value": "{global.motion.duration.slow}",  "type": "other" },
+      "easing":      { "value": "{global.motion.easing.spring}",  "type": "other" }
+    },
+
+    "table": {
+      "cellPaddingX":   { "value": "{global.spacing.3}",          "type": "spacing",   "$description": "12px" },
+      "cellPaddingY":   { "value": "{global.spacing.2}",          "type": "spacing",   "$description": "8px" },
+      "headerFontSize": { "value": "{global.font.size.xs}",       "type": "fontSizes", "$description": "10px" },
+      "cellFontSize":   { "value": "{global.font.size.sm}",       "type": "fontSizes", "$description": "11px" },
+      "borderWidth":    { "value": "{global.borderWidth.hairline}","type": "borderWidths" }
+    }
+  }
+}

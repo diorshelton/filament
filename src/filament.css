@@ -1,0 +1,410 @@
+/*
+ * Filament Design System — CSS Custom Properties
+ * Source of truth: filament-tokens-v0.1.0.json
+ *
+ * Units
+ * ─────
+ * Font sizes  → rem  (respects user browser settings)
+ * Spacing     → rem  (scales with text)
+ * Radius      → px   (optical, does not need to scale)
+ * Borders     → px   (sub-pixel values)
+ * Shadows     → px   (fixed visual effect)
+ * Motion      → ms   (fixed timing)
+ * z-index     → unitless
+ *
+ * Sections
+ * ────────
+ * 1.  Color primitives
+ * 2.  Typography
+ * 3.  Spacing
+ * 4.  Border radius
+ * 5.  Border width
+ * 6.  Shadows & focus rings
+ * 7.  Motion
+ * 8.  z-index
+ * 9.  Semantic — light mode
+ * 10. Semantic — dark mode
+ */
+
+
+/* ============================================================
+   1. COLOR PRIMITIVES
+   Not consumed by components directly.
+   Referenced by semantic tokens in sections 9–10.
+   ============================================================ */
+
+:root {
+
+  /* Gold */
+  --primitive-gold-50:  #FBF4E0;
+  --primitive-gold-100: #F5ECCC;
+  --primitive-gold-200: #EDD89A;
+  --primitive-gold-400: #E7CC86;
+  --primitive-gold-600: #C9A94F;
+  --primitive-gold-800: #8A6A1A;
+  --primitive-gold-900: #4A380E;
+
+  /* Navy */
+  --primitive-navy-50:  #EDF2F5;
+  --primitive-navy-100: #CCDAE4;
+  --primitive-navy-200: #8EB2C8;
+  --primitive-navy-400: #4A7A99;
+  --primitive-navy-600: #254052;
+  --primitive-navy-800: #162838;
+  --primitive-navy-900: #0A1620;
+
+  /* Vermillion */
+  --primitive-vermillion-50:  #FEF0F0;
+  --primitive-vermillion-100: #FDE8E8;
+  --primitive-vermillion-200: #FAB8B7;
+  --primitive-vermillion-400: #F87775;
+  --primitive-vermillion-600: #F64740;
+  --primitive-vermillion-800: #B82020;
+  --primitive-vermillion-900: #6A1010;
+
+  /* Steel */
+  --primitive-steel-50:  #EBF5F7;
+  --primitive-steel-100: #C8E4EA;
+  --primitive-steel-200: #94CCD8;
+  --primitive-steel-400: #5296A5;
+  --primitive-steel-600: #2E6878;
+  --primitive-steel-800: #1A3E48;
+  --primitive-steel-900: #0E2228;
+
+  /* Neutral */
+  --primitive-neutral-0:   #FFFFFF;
+  --primitive-neutral-50:  #FAFAF6;
+  --primitive-neutral-100: #EDEAE4;
+  --primitive-neutral-200: #E2DBD0;
+  --primitive-neutral-400: #C8C0B4;
+  --primitive-neutral-600: #8A9CA8;
+  --primitive-neutral-800: #4A6070;
+  --primitive-neutral-900: #1C2E3A;
+
+
+  /* ============================================================
+     2. TYPOGRAPHY
+     ============================================================ */
+
+  /* Families */
+  --font-family-display: Spectral, Georgia, serif;
+  --font-family-body:    'DM Sans', system-ui, sans-serif;
+
+  /* Weights */
+  --font-weight-regular:  400;
+  --font-weight-medium:   500;
+  --font-weight-semibold: 600;
+
+  /* Sizes
+     xs  = 10px   sm  = 11px   md = 13px
+     lg  = 16px   xl  = 20px   2xl = 28px */
+  --font-size-xs:  0.625rem;
+  --font-size-sm:  0.6875rem;
+  --font-size-md:  0.8125rem;
+  --font-size-lg:  1rem;
+  --font-size-xl:  1.25rem;
+  --font-size-2xl: 1.75rem;
+
+  /* Line heights */
+  --line-height-tight:   1.1;
+  --line-height-snug:    1.25;
+  --line-height-normal:  1.5;
+  --line-height-relaxed: 1.7;
+  --line-height-loose:   1.75;
+
+  /* Letter spacing */
+  --letter-spacing-tighter: -0.02em;
+  --letter-spacing-tight:   -0.01em;
+  --letter-spacing-normal:   0em;
+  --letter-spacing-wide:     0.04em;
+  --letter-spacing-wider:    0.09em;
+  --letter-spacing-widest:   0.12em;
+
+
+  /* ============================================================
+     3. SPACING
+     4px base grid. Token number = px value ÷ 4.
+     1 = 4px, 2 = 8px, 4 = 16px, etc.
+     ============================================================ */
+
+  --spacing-0:  0rem;
+  --spacing-1:  0.25rem;   /*  4px */
+  --spacing-2:  0.5rem;    /*  8px */
+  --spacing-3:  0.75rem;   /* 12px */
+  --spacing-4:  1rem;      /* 16px */
+  --spacing-5:  1.25rem;   /* 20px */
+  --spacing-6:  1.5rem;    /* 24px */
+  --spacing-7:  1.75rem;   /* 28px */
+  --spacing-8:  2rem;      /* 32px */
+  --spacing-9:  2.25rem;   /* 36px — standard input height */
+  --spacing-10: 2.5rem;    /* 40px — large button / toolbar */
+  --spacing-12: 3rem;      /* 48px — nav height */
+  --spacing-16: 4rem;      /* 64px — page top padding */
+  --spacing-20: 5rem;      /* 80px — page bottom padding */
+  --spacing-24: 6rem;      /* 96px — hero section padding */
+
+
+  /* ============================================================
+     4. BORDER RADIUS
+     ============================================================ */
+
+  --radius-none: 0px;
+  --radius-sm:   4px;    /* Badges, tags, chips */
+  --radius-md:   8px;    /* Inputs, buttons */
+  --radius-lg:   12px;   /* Cards, dropdowns */
+  --radius-xl:   16px;   /* Panels, modals */
+  --radius-2xl:  20px;   /* Feature cards, hero sections */
+  --radius-full: 9999px; /* Pills, toggles */
+
+
+  /* ============================================================
+     5. BORDER WIDTH
+     ============================================================ */
+
+  --border-width-hairline: 0.5px; /* Default — all borders and dividers */
+  --border-width-thin:     1px;   /* Emphasis borders */
+  --border-width-accent:   2px;   /* Pull quotes, featured card ring */
+  --border-width-thick:    3px;   /* Top accent bars on cards */
+
+
+  /* ============================================================
+     6. SHADOWS & FOCUS RINGS
+     Light mode elevation. Dark mode uses surface lightening.
+     ============================================================ */
+
+  --shadow-none: none;
+  --shadow-xs:   0 1px 2px rgba(20, 32, 44, 0.06);
+  --shadow-sm:   0 2px 6px rgba(20, 32, 44, 0.08);
+  --shadow-md:   0 4px 16px rgba(20, 32, 44, 0.10),
+                 0 1px 4px rgba(20, 32, 44, 0.06);
+  --shadow-lg:   0 8px 32px rgba(20, 32, 44, 0.12),
+                 0 2px 8px rgba(20, 32, 44, 0.06);
+  --shadow-xl:   0 16px 48px rgba(20, 32, 44, 0.16),
+                 0 4px 12px rgba(20, 32, 44, 0.08);
+
+  /* Focus rings */
+  --focus-ring-steel:      0 0 0 2.5px rgba(31, 100, 117, 0.20);
+  --focus-ring-steel-dark: 0 0 0 2.5px rgba(82, 150, 165, 0.25);
+  --focus-ring-gold:       0 0 0 2.5px rgba(231, 204, 134, 0.35);
+  --focus-ring-red:        0 0 0 2.5px rgba(246, 71, 64, 0.18);
+
+
+  /* ============================================================
+     7. MOTION
+     ============================================================ */
+
+  /* Durations */
+  --duration-instant: 75ms;   /* Checkbox tick, toggle snap */
+  --duration-fast:    100ms;  /* Hover states, badge swap */
+  --duration-default: 200ms;  /* Most transitions */
+  --duration-slow:    300ms;  /* Modals, panels, drawers */
+  --duration-slower:  400ms;  /* Staggered reveals, onboarding */
+
+  /* Easing curves */
+  --easing-linear:      linear;
+  --easing-ease-out:    cubic-bezier(0.0, 0.0, 0.2, 1); /* Entering — default */
+  --easing-ease-in:     cubic-bezier(0.4, 0.0, 1.0, 1); /* Exiting */
+  --easing-ease-in-out: cubic-bezier(0.4, 0.0, 0.2, 1); /* Moving position */
+  --easing-spring:      cubic-bezier(0.34, 1.56, 0.64, 1); /* Toasts, delight */
+
+
+  /* ============================================================
+     8. Z-INDEX
+     ============================================================ */
+
+  --z-base:     0;
+  --z-raised:   10;   /* Sticky headers, pinned rows */
+  --z-dropdown: 100;  /* Dropdowns, tooltips, popovers */
+  --z-overlay:  200;  /* Modal backdrop */
+  --z-modal:    300;  /* Modal panel */
+  --z-toast:    400;  /* Toasts — always on top */
+
+
+  /* ============================================================
+     9. SEMANTIC — LIGHT MODE
+     These are the tokens components actually consume.
+     ============================================================ */
+
+  /* Background */
+  --color-bg-page:    var(--primitive-neutral-50);   /* #FAFAF6 */
+  --color-bg-surface: var(--primitive-neutral-0);    /* #FFFFFF */
+  --color-bg-subtle:  var(--primitive-neutral-100);  /* #EDEAE4 */
+  --color-bg-overlay: rgba(37, 64, 82, 0.50);
+  --color-bg-nav:     var(--primitive-navy-600);     /* #254052 */
+
+  /* Border */
+  --color-border-default: var(--primitive-neutral-200);    /* #E2DBD0 */
+  --color-border-strong:  var(--primitive-neutral-400);    /* #C8C0B4 */
+  --color-border-focused: #1F6475;                         /* Darkened steel — AA on white */
+  --color-border-error:   var(--primitive-vermillion-600); /* #F64740 */
+  --color-border-accent:  var(--primitive-gold-400);       /* #E7CC86 */
+
+  /* Text */
+  --color-text-display:     var(--primitive-navy-600);        /* #254052 · Spectral 600 */
+  --color-text-heading:     var(--primitive-navy-600);        /* #254052 · Spectral 600 */
+  --color-text-subheading:  #1F6475;                          /* Spectral 400 italic · darkened steel */
+  --color-text-body:        var(--primitive-neutral-800);     /* #4A6070 · DM Sans 400 */
+  --color-text-label:       var(--primitive-navy-600);        /* #254052 · DM Sans 500 */
+  --color-text-caption:     #546B78;                          /* DM Sans 400 · darkened for AA */
+  --color-text-hint:        #546B78;
+  --color-text-link:        #1F6475;                          /* DM Sans 400 · darkened steel */
+  --color-text-error:       var(--primitive-vermillion-800);  /* #B82020 */
+  --color-text-disabled:    var(--primitive-neutral-600);     /* #8A9CA8 */
+  --color-text-placeholder: var(--primitive-neutral-600);
+  --color-text-nav-active:  rgba(255, 255, 255, 0.90);
+  --color-text-nav-muted:   rgba(255, 255, 255, 0.45);
+  --color-text-on-gold:     #3A2C0A;
+  --color-text-on-navy:     var(--primitive-gold-400);
+  --color-text-on-red:      var(--primitive-neutral-0);
+  --color-text-on-steel:    var(--primitive-neutral-0);
+
+  /* Actions — Primary */
+  --color-action-primary-bg:     var(--primitive-gold-400);
+  --color-action-primary-text:   #3A2C0A;
+  --color-action-primary-border: var(--primitive-gold-600);
+
+  /* Actions — Secondary */
+  --color-action-secondary-bg:     var(--primitive-navy-600);
+  --color-action-secondary-text:   var(--primitive-gold-400);
+  --color-action-secondary-border: var(--primitive-navy-600);
+
+  /* Actions — Danger */
+  --color-action-danger-bg:     var(--primitive-vermillion-600);
+  --color-action-danger-text:   var(--primitive-neutral-0);
+  --color-action-danger-border: var(--primitive-vermillion-600);
+
+  /* Actions — Info */
+  --color-action-info-bg:     var(--primitive-steel-400);
+  --color-action-info-text:   var(--primitive-neutral-0);
+  --color-action-info-border: var(--primitive-steel-400);
+
+  /* Actions — Ghost */
+  --color-action-ghost-bg:     transparent;
+  --color-action-ghost-text:   var(--primitive-neutral-800);
+  --color-action-ghost-border: var(--primitive-neutral-400);
+
+  /* Feedback — Danger */
+  --color-feedback-danger-bg:     var(--primitive-vermillion-100);
+  --color-feedback-danger-text:   var(--primitive-vermillion-800);
+  --color-feedback-danger-accent: var(--primitive-vermillion-600);
+
+  /* Feedback — Info */
+  --color-feedback-info-bg:     var(--primitive-steel-50);
+  --color-feedback-info-text:   var(--primitive-steel-800);
+  --color-feedback-info-accent: var(--primitive-steel-400);
+
+  /* Feedback — Warning */
+  --color-feedback-warning-bg:     var(--primitive-gold-100);
+  --color-feedback-warning-text:   var(--primitive-gold-800);
+  --color-feedback-warning-accent: var(--primitive-gold-400);
+
+  /* Tags */
+  --color-tag-gold-bg:    var(--primitive-gold-100);
+  --color-tag-gold-text:  #7A5A10;
+  --color-tag-steel-bg:   var(--primitive-steel-50);
+  --color-tag-steel-text: #1E5E6E;
+  --color-tag-red-bg:     var(--primitive-vermillion-100);
+  --color-tag-red-text:   var(--primitive-vermillion-800);
+  --color-tag-neutral-bg: var(--primitive-neutral-100);
+  --color-tag-neutral-text: #546B78;
+
+  /* Input */
+  --color-input-bg:           var(--primitive-neutral-0);
+  --color-input-border:       var(--primitive-neutral-200);
+  --color-input-text:         var(--primitive-navy-600);
+  --color-input-placeholder:  var(--primitive-neutral-600);
+  --color-input-focus-border: #1F6475;
+  --color-input-focus-ring:   var(--focus-ring-steel);
+  --color-input-error-border: var(--primitive-vermillion-600);
+  --color-input-error-ring:   var(--focus-ring-red);
+
+  /* Elevation */
+  --elevation-card:    var(--shadow-sm);
+  --elevation-raised:  var(--shadow-md);
+  --elevation-modal:   var(--shadow-lg);
+  --elevation-overlay: var(--shadow-xl);
+
+}
+
+
+/* ============================================================
+   10. SEMANTIC — DARK MODE
+   Only overrides what changes. Primitives and non-color
+   tokens (spacing, radius, motion etc.) stay the same.
+   ============================================================ */
+
+[data-theme='dark'],
+.theme-dark {
+
+  /* Background */
+  --color-bg-page:    #131D25;
+  --color-bg-surface: #1C2D39;
+  --color-bg-subtle:  #1A2830;
+  --color-bg-overlay: rgba(10, 22, 32, 0.75);
+  --color-bg-nav:     #0E1820;
+
+  /* Border */
+  --color-border-default: #1E3040;
+  --color-border-strong:  #2E4858;
+  --color-border-focused: var(--primitive-steel-400); /* #5296A5 — passes on dark surface */
+  --color-border-error:   var(--primitive-vermillion-600);
+  --color-border-accent:  var(--primitive-gold-400);
+
+  /* Text */
+  --color-text-display:     #F0E8D6;
+  --color-text-heading:     #E8DEC8;
+  --color-text-subheading:  var(--primitive-steel-400); /* #5296A5 */
+  --color-text-body:        var(--primitive-neutral-600);
+  --color-text-label:       #A8BEC8;
+  --color-text-caption:     #7A9EAE; /* Lightened for AA on dark */
+  --color-text-hint:        #7A9EAE;
+  --color-text-link:        #78BBCC;
+  --color-text-error:       #F98480;
+  --color-text-disabled:    #3A5060;
+  --color-text-placeholder: #3A5060;
+  --color-text-nav-active:  #A8C8D8;
+  --color-text-nav-muted:   #3A5060;
+
+  /* Actions — Ghost only changes in dark */
+  --color-action-ghost-text:   var(--primitive-neutral-600);
+  --color-action-ghost-border: #2E4858;
+
+  /* Feedback — Danger */
+  --color-feedback-danger-bg:   #3A1010;
+  --color-feedback-danger-text: #F98480;
+
+  /* Feedback — Info */
+  --color-feedback-info-bg:   #112530;
+  --color-feedback-info-text: #78BBCC;
+
+  /* Feedback — Warning */
+  --color-feedback-warning-bg:   #35280E;
+  --color-feedback-warning-text: #D4A840;
+
+  /* Tags */
+  --color-tag-gold-bg:      #35280E;
+  --color-tag-gold-text:    var(--primitive-gold-400);
+  --color-tag-steel-bg:     #112530;
+  --color-tag-steel-text:   #78BBCC;
+  --color-tag-red-bg:       #3A1010;
+  --color-tag-red-text:     #F98480;
+  --color-tag-neutral-bg:   #1A2830;
+  --color-tag-neutral-text: #7A9EAE;
+
+  /* Input */
+  --color-input-bg:           #1C2D39;
+  --color-input-border:       #2E4858;
+  --color-input-text:         #D8E4EA;
+  --color-input-placeholder:  #3A5060;
+  --color-input-focus-border: var(--primitive-steel-400);
+  --color-input-focus-ring:   var(--focus-ring-steel-dark);
+  --color-input-error-border: var(--primitive-vermillion-600);
+  --color-input-error-ring:   var(--focus-ring-red);
+
+  /* Elevation — surface lightening instead of shadows */
+  --elevation-card:    #1C2D39;
+  --elevation-raised:  #1A2830;
+  --elevation-modal:   #243444;
+  --elevation-overlay: #2C3E50;
+
+}
