@@ -17,6 +17,11 @@ const meta = {
     disabled: {
       control: "boolean",
     },
+    asChild: {
+      control: false,
+      description:
+        "Renders the button as a child element, transferring all props onto it. See AsLink  stories for usage.",
+    },
   },
 } satisfies Meta<typeof Button>;
 
@@ -76,6 +81,21 @@ export const AllVariants: Story = {
       <Button variant="ghost">Ghost</Button>
     </div>
   ),
+  parameters: {
+    docs: {
+      source: {
+        code: `
+<div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
+	<Button variant="primary">Primary</Button>
+	<Button variant="secondary">Secondary</Button>
+	<Button variant="danger">Danger</Button>
+	<Button variant="info">Info</Button>
+	<Button variant="ghost">Ghost</Button>
+</div>
+`,
+      },
+    },
+  },
 };
 
 export const Disabled: Story = {
@@ -88,6 +108,9 @@ export const Disabled: Story = {
 };
 
 export const AsLink: Story = {
+  argTypes: {
+    asChild: { control: "boolean" },
+  },
   render: () => (
     <Button variant="primary" size="md" asChild>
       <a href="https://github.com" target="_blank" rel="noreferrer">
@@ -95,9 +118,25 @@ export const AsLink: Story = {
       </a>
     </Button>
   ),
+  parameters: {
+    docs: {
+      source: {
+        code: `
+<Button variant="primary" size="md" asChild>
+	<a href="https://github.com" target="_blank" rel="noreferrer">
+		View on GitHub
+	</a>
+</Button>
+`.trim(),
+      },
+    },
+  },
 };
 
 export const AsLinkGhost: Story = {
+  argTypes: {
+    asChild: { control: "boolean" },
+  },
   render: () => (
     <Button variant="ghost" size="sm" asChild>
       <a href="https://github.com" target="_blank" rel="noreferrer">
@@ -105,4 +144,16 @@ export const AsLinkGhost: Story = {
       </a>
     </Button>
   ),
+  parameters: {
+    docs: {
+      source: {
+        code: `
+<Button variant="ghost" size="sm" asChild>
+ <a href="https://github.com" target="_blank" rel="noreferrer">
+ GitHub
+ </a>
+</Button>`.trim(),
+      },
+    },
+  },
 };
