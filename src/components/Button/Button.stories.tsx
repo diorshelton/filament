@@ -30,7 +30,7 @@ export const Primary: Story = {
     variant: "primary",
     size: "md",
     disabled: false,
-    asChild: false
+    asChild: false,
   },
 };
 
@@ -85,4 +85,24 @@ export const Disabled: Story = {
     size: "md",
     disabled: true,
   },
+};
+
+export const AsLink: Story = {
+  render: () => (
+    <Button variant="primary" size="md" asChild>
+      <a href="https://github.com" target="_blank" rel="noreferrer">
+        View on GitHub
+      </a>
+    </Button>
+  ),
+};
+
+export const AsLinkGhost: Story = {
+  render: () => (
+    <Button variant="ghost" size="sm" asChild>
+      <a href="https://github.com" target="_blank" rel="noreferrer">
+        GitHub
+      </a>
+    </Button>
+  ),
 };
