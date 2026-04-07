@@ -7,7 +7,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
   plugins: [react()],
-  base: '/',
+  base: '/filament/',
   resolve: {
     alias: {
       '@': resolve(__dirname, './src'),
